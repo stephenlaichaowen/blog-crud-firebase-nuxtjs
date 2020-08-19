@@ -1,6 +1,21 @@
-# blog-firebase
+# Blog built with Nuxtjs + Firebase
 
-> My Blog and Firebase Storage
+> A blog project built with Nuxtjs, Firebase CRUD operation and authentication/authorization
+
+## Technology
+- Frontend: Nuxtjs
+- Backend: Firebase
+  
+## Nuxtjs
+Nuxt is a progressive framework based on Vue.js to create modern web applications. It is based on Vue.js official libraries (vue, vue-router and vuex) and powerful development tools (webpack, Babel and PostCSS). Nuxt's goal is to make web development powerful and performant with a great developer experience in mind.
+
+## Firebase
+Firebase is a Backend-as-a-Service — BaaS — that started as a YC11 startup and grew up into a next-generation app-development platform on Google Cloud Platform.
+It is a collection of  
+- Realtime Database
+- File Storage
+- Authentication
+- Hosting
 
 ## Build Setup
 
@@ -19,4 +34,16 @@ $ npm run start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## Deploy to Netlify account
+
+```bash
+# Build settings
+Build command: npm run generate
+Publish directory: dist
+```
+
+## Reference
+[Nuxt.js - Vue.js on Steroids](https://www.udemy.com/course/nuxtjs-vuejs-on-steroids/)
+  
+## DEMO
+[https://blog-firease-crud-nuxtjs.netlify.app/](https://blog-firease-crud-nuxtjs.netlify.app)

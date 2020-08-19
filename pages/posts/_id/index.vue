@@ -18,7 +18,7 @@
 export default {
   head() {
     return {
-      title: this.$route.params.id
+      title: `id:${this.$route.params.id}`
     }
   }
 }

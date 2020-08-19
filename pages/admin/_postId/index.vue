@@ -12,7 +12,8 @@ export default {
   layout: 'admin',
   head() {
     return {
-      title: this.$route.params.postId
+      title: `id:${this.$route.params.postId}`
+      // title: this.loadedPost.title
     }
   },
   data() {
