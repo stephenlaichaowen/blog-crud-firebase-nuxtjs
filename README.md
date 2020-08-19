@@ -46,4 +46,4 @@ Publish directory: dist
 [Nuxt.js - Vue.js on Steroids](https://www.udemy.com/course/nuxtjs-vuejs-on-steroids/)
   
 ## DEMO
-[https://blog-firease-crud-nuxtjs.netlify.app/](https://blog-firease-crud-nuxtjs.netlify.app)
+[https://blog-firease-crud-nuxtjs.netlify.app/](https://blog-crud-firebase-nuxtjs.netlify.app/)
