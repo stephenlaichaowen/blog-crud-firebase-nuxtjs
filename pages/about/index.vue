@@ -8,6 +8,16 @@
   </div>
 </template>
 
+<script>
+export default {
+  head() {
+    return {
+      title: 'ABOUT'
+    }
+  }
+}
+</script>
+
 <style scoped>
 .about-page {
   text-align: center;

@@ -9,7 +9,11 @@
 
 <script>
 export default {
-  
+  head() {
+    return {
+      title: 'WD BLOG'
+    }
+  }
 }
 </script>
 

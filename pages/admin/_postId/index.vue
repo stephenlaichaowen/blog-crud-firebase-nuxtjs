@@ -10,6 +10,11 @@
 <script>
 export default {
   layout: 'admin',
+  head() {
+    return {
+      title: this.$route.params.postId
+    }
+  },
   data() {
     return {
       loadedPost: {

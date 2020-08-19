@@ -18,6 +18,11 @@
 <script>
 export default {  
   layout: 'admin',
+  head() {
+    return {
+      title: 'AUTHENTICATION'
+    }
+  },
   data() {
     return {
       isLogin: true

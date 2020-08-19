@@ -15,9 +15,13 @@
 </template>
 
 <script>
-  export default {
-    
+export default {
+  head() {
+    return {
+      title: this.$route.params.id
+    }
   }
+}
 </script>
 
 <style scoped>
