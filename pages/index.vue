@@ -3,17 +3,26 @@
     <section class="intro">
       <h1>Get teh latest tech news!</h1>
     </section>
-    <PostList />
+    <PostList :posts="posts" />
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   head() {
     return {
       title: 'WD BLOG'
     }
+  },
+  computed: {
+    ...mapGetters(['posts'])
   }
+  // async asyncData({ $axios }) {
+  //   const loadedPosts = await $axios.$get('/posts.json')
+  //   return { loadedPosts }
+  // }  
 }
 </script>
 

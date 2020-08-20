@@ -5,18 +5,27 @@
     </section>
     <section class="existing-posts">
       <h1>Existing Posts</h1>
-      <PostList isAdmin />
+      <PostList isAdmin :posts="posts" />
     </section>
   </div>
 </template>
 
 <script>
+import  { mapGetters } from 'vuex'
+
 export default {
   layout: 'admin',
   head() {
     return {
       title: 'ADMIN'
     }
+  },
+  // async asyncData({ $axios }) {
+  //   const loadedPosts = await $axios.$get('/posts.json')
+  //   return { loadedPosts }
+  // }  
+  computed: {
+    ...mapGetters(['posts'])
   }
 }
 </script>
