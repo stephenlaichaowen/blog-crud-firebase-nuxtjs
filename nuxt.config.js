@@ -40,6 +40,7 @@ export default {
   ],
 
   axios: {
+    baseURL: (process.env.NODE_ENV === 'production' ? 'https://blog-crud-firebase-nuxtjs.netlify.app/' : 'http://localhost:3000'), 
   },
   
   build: {
