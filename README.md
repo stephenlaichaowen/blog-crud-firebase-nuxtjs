@@ -9,6 +9,13 @@
 ## Nuxtjs
 Nuxt is a progressive framework based on Vue.js to create modern web applications. It is based on Vue.js official libraries (vue, vue-router and vuex) and powerful development tools (webpack, Babel and PostCSS). Nuxt's goal is to make web development powerful and performant with a great developer experience in mind.
 
+### Nuxt is all about Server Side Rendering
+We can prerender server side code with the following methods
+- asyncData: it is only work in pages to read/write data from server
+- fetch: it does same as asynData but has to works with Vuex
+- nuxtServerInit: read/write server data in Vuex
+
+
 ## Firebase
 Firebase is a Backend-as-a-Service — BaaS — that started as a YC11 startup and grew up into a next-generation app-development platform on Google Cloud Platform.
 It is a collection of  
@@ -17,11 +24,6 @@ It is a collection of
 - Authentication
 - Hosting
 
-## Nuxt is all about Server Side Rendering
-We can prerender server side code with the following methods
-- asyncData: it is only work in pages to read/write data from server
-- fetch: it does same as asynData but has to works with Vuex
-- nuxtServerInit: read/write server data in Vuex
 
 ## Build Setup
 
