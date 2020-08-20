@@ -3,7 +3,7 @@
 > A blog project built with Nuxtjs, Firebase CRUD operation and authentication/authorization
 
 ## Technology
-- Frontend: Nuxtjs
+- Frontend: Nuxtjs (Vuex)
 - Backend: Firebase
   
 ## Nuxtjs
@@ -16,6 +16,12 @@ It is a collection of
 - File Storage
 - Authentication
 - Hosting
+
+## Nuxt is all about Server Side Rendering
+We can prerender server side code with the following methods
+- asyncData: it is only work in pages to read/write data from server
+- fetch: it does same as asynData but has to works with Vuex
+- nuxtServerInit: read/write server data in Vuex
 
 ## Build Setup
 
