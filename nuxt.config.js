@@ -30,6 +30,7 @@ export default {
   components: true,
 
   plugins: [
+    '~plugins/date-filter.js'
   ],
   
   buildModules: [

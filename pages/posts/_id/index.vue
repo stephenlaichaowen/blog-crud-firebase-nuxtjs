@@ -1,9 +1,10 @@
 <template>
   <div class="single-post-page">
     <section class="post">
-      <h1 class="post-title">{{ post.title }} ID: {{ post.id }}</h1>
+      <!-- <h1 class="post-title">{{ post.title }} ID: {{ post.id }}</h1> -->
+      <h1 class="post-title">{{ post.title }}</h1>
       <div class="post-details">
-        <div class="post-detail">Last updated on {{ post.updatedDate }}</div>
+        <div class="post-detail">Last updated on {{ post.updatedDate |  date }}</div>
         <div class="post-detail">Written by {{ post.author }}</div>
       </div>
       <p class="post-content">{{ post.content }}</p>

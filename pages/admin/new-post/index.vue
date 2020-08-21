@@ -20,7 +20,6 @@ export default {
     ...mapActions(['addPost']),
     onSubmitted(postData) {
       this.addPost(postData)
-      this.$router.push('/admin')
     }
 
     // async onSubmitted(postData) {

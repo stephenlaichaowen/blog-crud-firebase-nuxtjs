@@ -27,7 +27,6 @@ export default {
     ...mapActions(['editPost']),
     onSubmitted(editedPost) {
       this.editPost(editedPost)
-      // this.$router.push('/admin')
     }
   },
 }
