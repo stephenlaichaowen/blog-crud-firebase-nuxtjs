@@ -14,7 +14,7 @@ export default {
   layout: 'admin',
   head() {
     return {
-      title: `id:${this.$route.params.postId}`
+      title: `${this.post.title}`
     }
   },
     

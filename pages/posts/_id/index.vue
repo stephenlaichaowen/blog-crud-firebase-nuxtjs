@@ -19,7 +19,8 @@
 export default {
   head() {
     return {
-      title: `id:${this.$route.params.id}`
+      // title: `id:${this.$route.params.id}`
+      title: `${this.post.title}`
     }
   },
 
