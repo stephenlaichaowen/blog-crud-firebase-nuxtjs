@@ -3,7 +3,7 @@
 > A blog project built with Nuxtjs, Firebase CRUD operation and authentication/authorization
 
 ## Technology
-- Frontend: Nuxtjs
+- Frontend: Nuxtjs (Vuex)
 - Backend: Firebase
   
 ## Nuxtjs
