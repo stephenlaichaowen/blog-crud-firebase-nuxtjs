@@ -9,6 +9,7 @@
       <div class="post-content">
         <h1>{{ title }}</h1>
         <p>{{ previewText }}</p>
+        <p>ID: {{ id }}</p>
       </div>
     </article>
   </nuxt-link>
@@ -18,7 +19,7 @@
 export default {
   props: {
     id: {
-      type: Number,
+      type: String,
       required: true
     },
     isAdmin: {

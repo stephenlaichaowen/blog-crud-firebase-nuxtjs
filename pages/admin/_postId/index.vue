@@ -1,29 +1,33 @@
 <template>
   <div class="admin-post-page">
     <section class="update-form">
-      <AdminPostForm />
+      <AdminPostForm :post="post" @submit="onSubmitted" />
     </section>
 
   </div>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   layout: 'admin',
   head() {
     return {
       title: `id:${this.$route.params.postId}`
-      // title: this.loadedPost.title
     }
   },
-  data() {
-    return {
-      loadedPost: {
-        author: 'Stephen Lai',
-        title: 'My awesome post',
-        content: 'Super amazing, thanks for that...',
-        thumbnailLink: 'https://www.paymentsjournal.com/wp-content/uploads/2019/11/904-scaled.jpg'
-      }
+    
+  async asyncData({ $axios, params }) {
+    const data = await $axios.$get(`https://nuxt-firebase-blog-d15dd.firebaseio.com/posts/${params.postId}.json`)
+    return { post: { ...data, id: params.postId} }
+  },
+
+  methods: {
+    ...mapActions(['editPost']),
+    onSubmitted(editedPost) {
+      this.editPost(editedPost)
+      // this.$router.push('/admin')
     }
   },
 }

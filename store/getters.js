@@ -1,3 +1,3 @@
 export const getters = {
-  posts: state => state.posts 
+  posts: state => state.posts
 }

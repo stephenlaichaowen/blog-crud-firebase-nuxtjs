@@ -1,19 +1,33 @@
 <template>
   <div class="admin-new-post-page">
     <section class="new-post-form">
-      <AdminPostForm />
+      <AdminPostForm @submit="onSubmitted" />
     </section>
   </div>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   layout: 'admin',
   head() {
     return {
       title: 'NEW POST'
     }
-  }
+  },
+  methods: {
+    ...mapActions(['addPost']),
+    onSubmitted(postData) {
+      this.addPost(postData)
+      this.$router.push('/admin')
+    }
+
+    // async onSubmitted(postData) {
+    //   const data = await this.$axios.$post('https://nuxt-firebase-blog-d15dd.firebaseio.com/posts.json', { ...postData, updatedDate: new Date() })
+    //   this.$router.push('/admin')
+    // }
+  },
 }
 </script>
 
