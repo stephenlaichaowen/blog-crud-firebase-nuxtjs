@@ -1,7 +1,8 @@
 <template>
   <div class="admin-page">
     <section class="new-post">
-      <AppButton @click="$router.push('/admin/new-post')">Create Post</AppButton>
+      <AppButton class="btn-create-post" @click="$router.push('/admin/new-post')">Create Post</AppButton>
+      <AppButton @click="onLogout">Logout</AppButton>
     </section>
     <section class="existing-posts">
       <h1>Existing Posts</h1>
@@ -11,10 +12,11 @@
 </template>
 
 <script>
-import  { mapGetters } from 'vuex'
+import  { mapGetters, mapActions } from 'vuex'
 
 export default {
   layout: 'admin',
+  middleware: ['check-auth', 'auth'],
   head() {
     return {
       title: 'ADMIN'
@@ -26,13 +28,23 @@ export default {
   // }  
   computed: {
     ...mapGetters(['posts'])
-  }
+  },
+  methods: {
+    ...mapActions(['logout']),
+    onLogout() {
+      this.logout()
+    }
+  },
 }
 </script>
 
 <style scoped>
 .admin-page {
   padding: 20px;
+}
+
+.btn-create-post {
+  margin-right: 1rem;
 }
 
 .new-post {

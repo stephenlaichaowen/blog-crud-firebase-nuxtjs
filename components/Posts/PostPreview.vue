@@ -9,7 +9,7 @@
       <div class="post-content">
         <h1>{{ title }}</h1>
         <p>{{ previewText }}</p>
-        <p>ID: {{ id }}</p>
+        <!-- <p>ID: {{ id }}</p> -->
       </div>
     </article>
   </nuxt-link>
@@ -52,19 +52,12 @@ export default {
   border: 1px solid #ccc;
   box-shadow: 0 2px 2px #ccc;
   background-color: white;
-  width: 90%;
+  /* width: 90%; */
 }
 
 a {
   text-decoration: none;
   color: black;
-}
-
-@media (min-width: 850px) {
-  .post-preview {
-    width: 400px;
-    margin: 10px;
-  }
 }
 
 .post-thumbnail {

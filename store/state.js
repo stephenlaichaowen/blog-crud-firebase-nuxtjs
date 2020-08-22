@@ -1,3 +1,4 @@
 export const state = {
-  posts: []
+  posts: [],
+  token: null
 }

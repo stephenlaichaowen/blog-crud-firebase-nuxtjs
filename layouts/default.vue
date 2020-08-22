@@ -1,13 +1,14 @@
 <template>
-  <div>
+  <div class="layout">
     <TheHeader @sidenavToggle="displaySidenav = !displaySidenav" />
     <TheSidenav :show="displaySidenav" @close="displaySidenav = false" />
-    <nuxt />
+    <nuxt class="page" />
   </div>
 </template>
 
 <script>
 export default {
+  // middleware: 'log',
   data() {
     return {
       displaySidenav: false
@@ -22,6 +23,8 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: auto;
+  max-width: 1920px;
 }
+
 </style>

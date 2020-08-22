@@ -38,11 +38,11 @@ export default {
 
 <style scoped>
 .post-list {
-  display: flex;
-  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 20px;  
   box-sizing: border-box;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  margin-bottom: 2rem;
 }
 </style>

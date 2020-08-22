@@ -13,6 +13,7 @@ export default {
       title: 'BLOG'
     }
   },
+  // middleware: 'log',
   computed: {
     ...mapGetters(['posts'])
   }

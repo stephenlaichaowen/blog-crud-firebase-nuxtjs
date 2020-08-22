@@ -19,8 +19,7 @@ export default {
   
   css: [
     '~assets/css/main.css'
-  ],
-  
+  ],  
 
   transitions: {
     name: 'fade',
@@ -35,6 +34,10 @@ export default {
   
   buildModules: [
   ],
+
+  env: {
+    fbAPIKey: 'AIzaSyBEnSEo7qEQkp740J6abN6qXI_oGHK3S10'
+  },
   
   modules: [
     '@nuxtjs/axios',
@@ -43,9 +46,12 @@ export default {
   axios: {
     baseURL: (process.env.NODE_ENV === 'production' ? 'https://blog-crud-firebase-nuxtjs.netlify.app/' : 'http://localhost:3000'), 
   },
+
+  router: {
+    // middleware: 'log'
+  },
   
-  build: {
-    
+  build: {    
     extend (config, ctx) {
     }
   }

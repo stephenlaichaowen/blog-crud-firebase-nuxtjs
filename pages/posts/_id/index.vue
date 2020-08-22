@@ -12,6 +12,7 @@
     <section class="post-feedback">
       <p>Let me know what you think about the post, send a mail to <a href="mailto:slai@gamil.com">feedback@slai.gamil.com</a></p>
     </section>
+    <nuxt-link to="/posts">Back to Posts</nuxt-link>
   </div>
 </template>
 

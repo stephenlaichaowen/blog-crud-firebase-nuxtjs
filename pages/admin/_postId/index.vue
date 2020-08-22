@@ -12,6 +12,7 @@ import { mapActions } from 'vuex'
 
 export default {
   layout: 'admin',
+  middleware: ['check-auth', 'auth'],
   head() {
     return {
       title: `${this.post.title}`

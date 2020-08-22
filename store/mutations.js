@@ -4,5 +4,7 @@ export const mutations = {
   editPost: (state, editedPost) => {
     const postIndex = state.posts.findIndex(post => post.id === editedPost.id)
     state.posts[postIndex] = editedPost
-  }
+  },
+  setToken: (state, token) => state.token = token,
+  clearToken: state => state.token = null
 }

@@ -1,22 +1,25 @@
 <template>
   <div class="admin-auth-page">
     <div class="auth-container">
-      <form>
-        <AppControlInput type="email">E-Mail Address</AppControlInput>
-        <AppControlInput type="password">Password</AppControlInput>
+      <form @submit.prevent="onSubmit">
+        <AppControlInput type="email" v-model="email">E-Mail Address</AppControlInput>
+        <AppControlInput type="password" v-model="password">Password</AppControlInput>
         <AppButton type="submit">{{ isLogin ? 'Login' : 'Sign Up' }}</AppButton>
         <AppButton
           type="button"
           btn-style="inverted"
           style="margin-left: 10px"
-          @click="isLogin = !isLogin">Switch to {{ isLogin ? 'Signup' : 'Login' }}</AppButton>
+          @click="isLogin = !isLogin"
+        >Switch to {{ isLogin ? 'Signup' : 'Login' }}</AppButton>
       </form>
     </div>
   </div>
 </template>
 
 <script>
-export default {  
+import  { mapGetters, mapActions } from 'vuex'
+
+export default {
   layout: 'admin',
   head() {
     return {
@@ -25,7 +28,39 @@ export default {
   },
   data() {
     return {
-      isLogin: true
+      isLogin: true,
+      email: '',
+      password: ''
+    }
+  },
+  mounted() {
+    console.log(`login state: ${this.isAuthenticated}`)     
+  },
+  computed: {
+    ...mapGetters(['isAuthenticated'])
+  },
+  methods: {
+    ...mapActions(['authenticateUser']),
+    onSubmit() {
+      this.authenticateUser({
+        isLogin: this.isLogin,
+        email: this.email,
+        password: this.password
+      })
+      // this.$router.push('/admin')
+      // let authUrl = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${process.env.fbAPIKey}`
+
+      // if (!this.isLogin) {
+      //   authUrl = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${process.env.fbAPIKey}`
+      // }
+      // const data = await this.$axios.$post(authUrl, {
+      //   email: this.email,
+      //   password: this.password,
+      //   returnSecureToken: true
+      // })
+      // console.log(data)
+      // return { data }
+
     }
   }
 }
