@@ -50,7 +50,7 @@ export default {
   router: {
     // middleware: 'log'
   },
-  
+
   build: {    
     extend (config, ctx) {
     }
